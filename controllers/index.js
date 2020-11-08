@@ -2,6 +2,7 @@ var mangSinhVien = [];
 var validate = new Validation();
 //Định nghĩa sự kiện click khi người dùng bấm nút xác nhận
 //Định nghĩa sự kiện click khi người dùng bấm nút xác nhận
+//Định nghĩa sự kiện click khi người dùng bấm nút xác nhận
 document.querySelector('#btnXacNhan').onclick = function() {
     //Tạo ra đối tượng sinh viên chứa thông tin người dùng nhập vào từ giao diện
     var sv = new SinhVien();
