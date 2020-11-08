@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-4 text-center">Quản lý sinh viên</h1>
+                <div class="form-group">
+                    <p>Mã sinh viên</p>
+                    <input class="form-control" id="maSinhVien" />
+                    <p class="text-danger kiemTraRong-maSinhVien"></p>
+                </div>
+
+                <div class="form-group">
+                    <p>Tên sinh viên</p>
+                    <input class="form-control" id="tenSinhVien" />
+                    <p class="text-danger kiemTraRong-tenSinhVien"></p>
+                    <p class="text-danger kiemTraDinhDang-tenSinhVien"></p>
+                    <p class="text-danger kiemTraDoDaiChuoi-tenSinhVien"></p>
+
+                </div>
+                <div class="form-group">
+                    <p>Email</p>
+                    <input class="form-control" id="email" />
+                    <p class="text-danger kiemTraRong-email"></p>
+                    <p class="text-danger kiemTraDinhDang-email"></p>
+                    <p class="text-danger kiemTraDoDaiChuoi-email"></p>
+
+                </div>
+                <!-- <div class="form-group">
+                    <p>Số điện thoại</p>
+                    <input class="form-control" id="soDienThoai" />
+                    <p class="text-danger kiemTraRong-soDienThoai"></p>
+                    <p class="text-danger kiemTraDinhDang-soDienThoai"></p>
+                </div> -->
+
+                <div class="form-group">
+                    <p>Loại sinh viên</p>
+                    <select class="form-control" id="loaiSinhVien">
+                        <option>Bình thường</option>
+                        <option>Khó khăn</option>
+                    </select>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <p>Điểm toán</p>
+                        <input id="diemToan" class="form-control" />
+                        <p class="text-danger kiemTraRong-diemToan"></p>
+                        <p class="text-danger kiemTraGiaTri-diemToan"></p>
+                        <p class="text-danger kiemTraDinhDang-diemToan"></p>
+
+
+                    </div>
+
+                    <div class="col-4">
+                        <p>Điểm lý</p>
+                        <input id="diemLy" class="form-control" />
+                        <p class="text-danger kiemTraRong-diemLy"></p>
+                        <p class="text-danger kiemTraGiaTri-diemLy"></p>
+                        <p class="text-danger kiemTraDinhDang-diemLy"></p>
+
+                    </div>
+
+                    <div class="col-4">
+                        <p>Điểm hóa</p>
+                        <input id="diemHoa" class="form-control" />
+                        <p class="text-danger kiemTraRong-diemHoa"></p>
+                        <p class="text-danger kiemTraGiaTri-diemHoa"></p>
+                        <p class="text-danger kiemTraDinhDang-diemHoa"></p>
+
+
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p>Điểm rèn luyện</p>
+                    <input id="diemRenLuyen" class="form-control" />
+                    <p class="text-danger kiemTraRong-diemRenLuyen"></p>
+                    <p class="text-danger kiemTraGiaTri-diemRenLuyen"></p>
+                    <p class="text-danger kiemTraDinhDang-diemRenLuyen"></p>
+
+
+
+                </div>
+                <div class="form-group text-center">
+                    <button id="btnXacNhan" class="btn btn-success btnXacNhan">xác nhận</button>
+                    <button id="btnLuuThongTin" class="btn btn-primary">Lưu thông tin</button>
+                </div>
+            </div>
+
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã sinh viên</th>
+                    <th>Tên sinh viên</th>
+                    <th>Email</th>
+                    <!-- <th>Số điện thoại</th> -->
+                    <th>Điểm trung bình</th>
+                    <th>Xếp loại</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tableSinhVien">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+
+    <!--Class (Prototype) SinhVien phải được chèn vào trước index -->
+    <script src="../models/Validation.js"></script>
+    <script src="../models/SinhVien.js"></script>
+
+    <!--Nhúng file service trước index-->
+    <script src="../services/SinhVienService.js"></script>
+
+    <script src="../controllers/indexAjax.js"></script>
+    <!-- <script src="../controllers/index.js"></script> -->
+</body>
+
+</html>
